@@ -8,7 +8,7 @@ const PrivateRoute = () => {
     const isLogged = localStorage.getItem('app-token')
     const navigate = useNavigate();
     useEffect(()=>{
-        if(isLogged && isLogged != 'true'){
+        if(isLogged && isLogged !== 'true'){
             navigate("/login")
         }
     },[])
