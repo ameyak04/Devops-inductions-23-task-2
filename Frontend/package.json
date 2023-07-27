@@ -1,7 +1,7 @@
 {
   "name": "authentication-app",
   "version": "0.1.0",
-  "proxy": "http://0.0.0.0:8080",
+  "proxy": "http://spidercontainerbkend1:8080",
   "dependencies": {
     "axios": "^0.21.0",
     "formik": "^2.2.5",
