@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    paths:
+      - 'nginx.conf'
+      # Add other file paths here if needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and test
+        run: |
+          # Add your build and test commands here for the application
+          # For example:
+          # python main.py --test
