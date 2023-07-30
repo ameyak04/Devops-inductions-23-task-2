@@ -1,10 +1,12 @@
 <h1>Spider Devops Inductions - Task 2 </h1>
 
 <h2><b>Instructions before task completion:</b></h2>
-Please login  user account with Sudo previledges.
+Please login  user account with Sudo previledges.<br />
+
 ``` sudo -i ``` ( to Root) <br />
 
-Assuming the home directory of root is /root <br />
+#Assuming the home directory of root is /root <br />
+
 #copy the files docker-compose-spidertask2.yaml, nginx.conf, package.json, main.rs, diesel.sh and .env to the /root directory<br />
 
 ```mkdir scripts```<br />
