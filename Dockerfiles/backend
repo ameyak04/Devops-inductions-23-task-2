@@ -1,0 +1,11 @@
+FROM ubuntu:latest
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.cargo/bin
+RUN apt update && apt-get install -y git cargo libpq-dev
+RUN git clone https://github.com/ameyak04/Devops-inductions-23-task-2.git /root/Devops-inductions-23-task-2
+COPY ./diesel.sh /root/Devops-inductions-23-task-2/Backend/diesel.sh
+COPY ./.env /root
+WORKDIR /root/Devops-inductions-23-task-2/Backend
+RUN apt install -y libpq-dev
+RUN cargo install diesel_cli --no-default-features --features postgres
+RUN chmod 777 /root/Devops-inductions-23-task-2/Backend/diesel.sh
+ENTRYPOINT /root/Devops-inductions-23-task-2/Backend/diesel.sh
