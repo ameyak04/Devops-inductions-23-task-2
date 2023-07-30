@@ -1,9 +1,26 @@
 <h1>Spider Devops Inductions - Task 2 </h1>
 
-<h2><b>Instructions:</b></h2>
+<h2><b>Instructions before task completion:</b></h2>
+Please login  user account with Sudo previledges.
+```sudo -i``` ( to Root) 
+
+Assuming the home directory of root is /root 
+#copy the files docker-compose-spidertask2.yaml, nginx.conf, package.json, main.rs, diesel.sh and .env to the /root directory
+
+```mkdir scripts```
+```cd scripts```
+#copy the file postgrescreatedb.sql to the /root/scripts directory
+
+```docker compose -f docker-compose-spidertask2.yaml up -d```
+#this should run all the servers from /root directory
+refer <b>README.txt</b> for the detailed instructions
+
+
+
+<h2><b>Instructions before task completion:</b></h2>
 1. Fork the given repo and set the your repo to <b>private</b>.<br />
-2. Dockerize the given application using <b>Docker</b> and <b>Docker-compose</b><br />
-3. refer <b>README.txt</b> for the further instructions
+2. Setup the servers using the instructions given below
+3. Dockerize the given application using <b>Docker</b> and <b>Docker-compose</b><br />
 <br/>
 <hr/>
 <h2><b>Tech Stack:</b></h2>
