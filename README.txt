@@ -29,7 +29,7 @@ ENTRYPOINT npm start
 
 
 
-backend dockerfile sets up the backend server
+Backend:backend dockerfile sets up the backend server
 FROM ubuntu:latest
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.cargo/bin
 RUN apt update && apt-get install -y git cargo libpq-dev
