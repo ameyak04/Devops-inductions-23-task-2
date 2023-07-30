@@ -16,11 +16,13 @@ copy the file postgrescreatedb.sql to the /root/scripts directory<br />
 ```docker compose -f docker-compose-spidertask2.yaml up -d```<br />
 this should run all the servers from /root directory<br />
 refer <b>README.txt</b> for the detailed instructions<br />
+<hr/>
+<hr/>
 
 
 <h2><b>Instructions before task completion:</b></h2>
 1. Fork the given repo and set the your repo to <b>private</b>.<br />
-2. Setup the servers using the instructions given below
+2. Setup the servers using the instructions given below<br/>
 3. Dockerize the given application using <b>Docker</b> and <b>Docker-compose</b><br />
 <br/>
 <hr/>
