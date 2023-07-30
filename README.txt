@@ -11,7 +11,9 @@ cd scripts
 #copy the file postgrescreatedb.sql to the /root/scripts directory
 
 docker compose -f docker-compose-spidertask2.yaml up -d
-#this should run all the servers
+#this should run all the servers from /root directory
 
 #Dockerfiles are uploaded for reference ---> the images used in the compose file are built on these dockerfiles
-db Dockerfile 
+db Dockerfile downloads official postgres image from dockerhub sets password and also run this sql script at the start
+frontend dockerfile sets up the frontend server
+backend dockerfile sets up the backend server
