@@ -14,6 +14,19 @@ docker compose -f docker-compose-spidertask2.yaml up -d
 #this should run all the servers from /root directory
 
 #Dockerfiles are uploaded for reference ---> the images used in the compose file are built on these dockerfiles
-db Dockerfile downloads official postgres image from dockerhub sets password and also run this sql script at the start
-frontend dockerfile sets up the frontend server
+DB:db Dockerfile downloads official postgres image from dockerhub sets password and also run this sql script at the start
+
+
+
+Frontend:frontend dockerfile sets up the frontend server
+FROM ubuntu:latest
+RUN apt update && apt-get install -y npm
+RUN git clone https://github.com/ameyak04/Devops-inductions-23-task-2.git /root/Devops-inductions-23-task-2
+COPY ./package.json /root/Devops-inductions-23-task-2/Frontend
+WORKDIR /root/Devops-inductions-23-task-2/Frontend
+RUN npm i
+ENTRYPOINT npm start
+
+
+
 backend dockerfile sets up the backend server
