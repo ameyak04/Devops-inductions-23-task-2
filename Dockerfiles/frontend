@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+RUN apt update && apt-get install -y npm
+RUN git clone https://github.com/ameyak04/Devops-inductions-23-task-2.git /root/Devops-inductions-23-task-2
+COPY ./package.json /root/Devops-inductions-23-task-2/Frontend
+WORKDIR /root/Devops-inductions-23-task-2/Frontend
+RUN npm i
+ENTRYPOINT npm start
