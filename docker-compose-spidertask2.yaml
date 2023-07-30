@@ -1,0 +1,38 @@
+version: '2.18.1'
+services:
+    Database:
+      image: ghcr.io/ameyak04/spider-db1
+      container_name: spidercontainerdb
+    Backend1:
+      image: ghcr.io/ameyak04/spider-bkend1
+      depends_on:
+        - Database
+      container_name: spidercontainerbkend1
+      tty: true
+      stdin_open: true
+    Backend2:
+      image: ghcr.io/ameyak04/spider-bkend1
+      depends_on:
+        - Database
+      container_name: spidercontainerbkend2
+      tty: true
+      stdin_open: true
+    nginx:
+      image: nginx:latest
+      volumes:
+        - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      container_name: spidercontainernginx
+      depends_on:
+        - Database
+        - Backend1
+        - Backend2
+    Frontend:
+      image: ghcr.io/ameyak04/spider-frntend1
+      depends_on:
+        - Database
+        - Backend1
+        - Backend2
+        - nginx
+      container_name: spidercontainerfrntend
+      ports:
+      - 3000:3000
