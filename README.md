@@ -2,9 +2,8 @@
 
 <h2><b>Instructions:</b></h2>
 1. Fork the given repo and set the your repo to <b>private</b>.<br />
-2. Setup the servers using the instructions given below<br />
-3. Dockerize the given application using <b>Docker</b> and <b>Docker-compose</b><br />
-4. refer <b>README.txt</b> for the further instructions
+2. Dockerize the given application using <b>Docker</b> and <b>Docker-compose</b><br />
+3. refer <b>README.txt</b> for the further instructions
 <br/>
 <hr/>
 <h2><b>Tech Stack:</b></h2>
